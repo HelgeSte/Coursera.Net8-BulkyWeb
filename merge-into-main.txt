@@ -1,0 +1,13 @@
+What commands are equal to grag and drop a branch into main, and then selecting Merge <branch name> into main?
+
+If you were using the command line instead of GitKraken, the "drag and drop" merge is equivalent to these two steps:
+Switch to main:
+git checkout main
+Merge the branch:
+git merge <branch-name>
+What’s happening under the hood:
+Checkout: Git switches your working directory to the main branch.
+Merge: Git looks at the history of <branch-name> and applies those commits onto main.
+If the merge is "Fast-forward," Git simply moves the main pointer ahead. If not, Git creates a new "Merge Commit" to join the two histories together.
+Do you have any merge conflicts appearing in your graph right now that we should walk through?
+
